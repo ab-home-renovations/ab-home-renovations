@@ -1,0 +1,93 @@
+.footer {
+  background: var(--color-primary);
+  color: rgba(255, 255, 255, 0.78);
+  padding: 4rem 0 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-logo {
+  height: 50px;
+  width: auto;
+  margin-bottom: 0.4rem;
+}
+.footer-slogan {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+.footer-desc {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  opacity: 0.7;
+  margin-bottom: 1.2rem;
+}
+.footer-contact-quick a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-gold);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.footer-col h4 {
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+  opacity: 0.9;
+}
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.footer-col ul li {
+  font-size: 0.84rem;
+}
+.footer-col ul a,
+.footer-col ul span {
+  opacity: 0.68;
+  transition: opacity 0.2s;
+}
+.footer-col ul a:hover {
+  opacity: 1;
+  color: var(--color-gold);
+}
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.contact-list svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.footer-bottom {
+  padding: 1.25rem 0;
+  text-align: center;
+  font-size: 0.82rem;
+  opacity: 0.5;
+}
+@media (max-width: 1000px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 540px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

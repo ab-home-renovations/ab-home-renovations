@@ -1,0 +1,16 @@
+.services-header {
+  background: var(--color-primary);
+  padding: 5rem 0 4rem;
+  color: white;
+}
+.services-header h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: white;
+  margin-bottom: 1rem;
+}
+.services-header-sub {
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 540px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
