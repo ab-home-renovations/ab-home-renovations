@@ -5,7 +5,21 @@
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A&B Home Renovations LLC</title>
-    <script type="module" crossorigin src="/ab-home-renovations/assets/index-DqRZKoED.js"></script>
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          });
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded[0] +
+            (decoded.slice(1).length ? '?' + decoded.slice(1).join('&') : '') +
+            l.hash
+          );
+        }
+      }(window.location));
+    </script>
+    <script type="module" crossorigin src="/ab-home-renovations/assets/index-BVM5JI2L.js"></script>
     <link rel="stylesheet" crossorigin href="/ab-home-renovations/assets/index-Cg2J7byc.css">
   </head>
   <body>
