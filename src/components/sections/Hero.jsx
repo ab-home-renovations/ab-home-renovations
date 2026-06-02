@@ -28,10 +28,10 @@ export default function Hero() {
           electrical and full-home renovations — done right, every time.
         </p>
         <div className="hero-actions">
-          <a href="/contact" className="btn btn-gold">
+          <a href="/ab-home-renovations/contact" className="btn btn-gold">
             Get a Free Quote
           </a>
-          <a href="/services" className="btn btn-outline">
+          <a href="/ab-home-renovations/services" className="btn btn-outline">
             View Our Services
           </a>
         </div>

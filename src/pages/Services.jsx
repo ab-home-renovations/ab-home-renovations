@@ -14,7 +14,7 @@ export default function ServicesPage() {
             handle it. Get a free estimate with no obligation.
           </p>
           <a
-            href="/contact"
+            href="/ab-home-renovations/contact"
             className="btn btn-gold"
             style={{ marginTop: "1.5rem" }}
           >
