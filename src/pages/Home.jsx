@@ -2,6 +2,7 @@ import Hero from "../components/sections/Hero";
 import StatsBar from "../components/sections/StatsBar";
 import Services from "../components/sections/Services";
 import { CheckCircle2, Award, Users, ArrowRight } from "lucide-react";
+import logoImg from "../assets/images-logos/logo-clear-background.png";
 import "./Home.css";
 
 const whyUs = [
@@ -35,9 +36,9 @@ export default function Home() {
             {/* Replace with actual image */}
             <div className="welcome-img-placeholder">
               <img
-                src="/src/assets/images/logo.jpg"
+                src={logoImg}
                 alt="A&B Home Renovations"
-                style={{ maxWidth: "220px", opacity: 0.25 }}
+                style={{ maxWidth: "260px" }}
               />
             </div>
             <div className="welcome-badge">

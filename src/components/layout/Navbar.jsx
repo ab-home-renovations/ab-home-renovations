@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, Menu, X } from "lucide-react";
+import logoImg from "../../assets/images-logos/logo-small-bubbly-outline.png";
 import "./Navbar.css";
 
 const links = [
@@ -27,7 +28,7 @@ export default function Navbar() {
       <div className="container navbar-inner">
         <Link to="/" className="navbar-logo">
           <img
-            src="/src/assets/images/logo.jpg"
+            src={logoImg}
             alt="A&B Home Renovations LLC"
             className="logo-img"
           />

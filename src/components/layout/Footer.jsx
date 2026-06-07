@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import logoImg from "../../assets/images-logos/logo-small-bubbly-outline.png";
 import "./Footer.css";
 
 const services = [
@@ -23,7 +24,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <img
-            src="/src/assets/images/logo.jpg"
+            src={logoImg}
             alt="A&B Home Renovations"
             className="footer-logo"
           />
@@ -71,11 +72,11 @@ export default function Footer() {
             </li>
             <li>
               <Mail size={15} />
-              <span>info@abhomerenovations.com</span>
+              <a href="mailto:info@abhomeswebuildyourideas.com">info@abhomeswebuildyourideas.com</a>
             </li>
             <li>
               <Clock size={15} />
-              <span>Mon – Sat: 8:00 AM – 6:00 PM</span>
+              <span>Mon – Fri: 8:00 AM – 6:00 PM</span>
             </li>
           </ul>
           <div className="footer-links-nav" style={{ marginTop: "1.5rem" }}>
