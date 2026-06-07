@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 
 export default function App() {
   return (
-    <BrowserRouter basename="/ab-home-renovations">
+    <BrowserRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

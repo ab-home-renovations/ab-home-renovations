@@ -71,7 +71,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <a href="/ab-home-renovations/about" className="btn btn-outline-dark">
+            <a href="/about" className="btn btn-outline-dark">
               Learn More <ArrowRight size={16} />
             </a>
           </div>
@@ -90,7 +90,7 @@ export default function Home() {
                 Built on Trust &amp; Quality
               </h2>
             </div>
-            <a href="/ab-home-renovations/contact" className="btn btn-gold">
+            <a href="/contact" className="btn btn-gold">
               Get a Free Quote <ArrowRight size={16} />
             </a>
           </div>
@@ -114,7 +114,7 @@ export default function Home() {
             <p>Contact us today for a free, no-obligation estimate.</p>
           </div>
           <div className="cta-actions">
-            <a href="/ab-home-renovations/contact" className="btn btn-primary">
+            <a href="/contact" className="btn btn-primary">
               Request a Free Quote
             </a>
             <a href="tel:+13523392373" className="btn btn-outline">
