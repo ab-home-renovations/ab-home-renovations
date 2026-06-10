@@ -1,25 +1,11 @@
+import { useState } from "react";
+import images from "../data/galleryImages";
+import Lightbox from "../components/common/Lightbox";
 import "./Gallery.css";
-const categories = [
-  "All",
-  "Kitchen",
-  "Tile Work",
-  "Flooring",
-  "Painting",
-  "Bathroom",
-];
-const items = Array.from({ length: 12 }, (_, i) => ({
-  id: i + 1,
-  label: [
-    "Kitchen Remodel",
-    "Tile Work",
-    "Hardwood Floor",
-    "Exterior Paint",
-    "Bathroom Reno",
-    "Backsplash",
-  ][i % 6],
-}));
 
 export default function Gallery() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   return (
     <main style={{ paddingTop: "80px" }}>
       <section className="gallery-header">
@@ -34,17 +20,29 @@ export default function Gallery() {
       <section style={{ background: "var(--color-light)" }}>
         <div className="container">
           <div className="gallery-grid">
-            {items.map((item) => (
-              <div className="gallery-item" key={item.id}>
-                <div className="gallery-img">
-                  {/* Replace with real <img src="..." /> */}
-                  <span>{item.label}</span>
-                </div>
+            {images.map((src, i) => (
+              <div
+                className="gallery-item"
+                key={src}
+                onClick={() => setActiveIndex(i)}
+              >
+                <img
+                  src={src}
+                  alt={`A&B Home Renovations project ${i + 1}`}
+                  className="gallery-img"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      <Lightbox
+        images={images}
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+      />
     </main>
   );
 }
