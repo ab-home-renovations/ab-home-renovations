@@ -1,5 +1,6 @@
 import { Target, Eye, Heart } from "lucide-react";
 import logoImg from "../assets/images-logos/logo-clear-background.png";
+import aboutImg from "../assets/images-logos/about_us.jpg";
 import "./About.css";
 
 export default function About() {
@@ -44,8 +45,7 @@ export default function About() {
             </p>
           </div>
           <div className="about-img-placeholder">
-            <img src={logoImg} alt="A&B Home Renovations" className="about-img-logo" />
-            {/* Replace with a real team or project photo */}
+            <img src={aboutImg} alt="A&B Home Renovations" className="about-img-logo" />
           </div>
         </div>
       </section>

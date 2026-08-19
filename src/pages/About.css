@@ -25,17 +25,13 @@
 }
 .about-img-placeholder {
   border-radius: 12px;
-  aspect-ratio: 4/3;
-  background: linear-gradient(135deg, var(--color-light), #dce8ff);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
 }
 .about-img-logo {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .mv-grid {
   display: grid;
