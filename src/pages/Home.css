@@ -11,17 +11,44 @@
 .welcome-img-wrap {
   position: relative;
 }
-.welcome-img-placeholder {
+.welcome-video-wrap {
+  position: relative;
   border-radius: 12px;
   aspect-ratio: 4/3;
-  background: linear-gradient(135deg, var(--color-light), #dce8ff);
+  background: #0a2540;
+  overflow: hidden;
+}
+.welcome-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.welcome-video-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background var(--transition);
 }
-.welcome-img-placeholder img {
-  width: 60%;
+.welcome-video-nav:hover {
+  background: white;
+}
+.welcome-video-prev {
+  left: 0.75rem;
+}
+.welcome-video-next {
+  right: 0.75rem;
 }
 .welcome-badge {
   position: absolute;

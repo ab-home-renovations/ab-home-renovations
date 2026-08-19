@@ -1,9 +1,20 @@
+import { useState } from "react";
 import Hero from "../components/sections/Hero";
 import StatsBar from "../components/sections/StatsBar";
 import Services from "../components/sections/Services";
-import { CheckCircle2, Award, Users, ArrowRight } from "lucide-react";
-import logoImg from "../assets/images-logos/logo-clear-background.png";
+import {
+  CheckCircle2,
+  Award,
+  Users,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import video1 from "../assets/videos/VIDEO-2026-07-29-17-03-58.mp4";
+import video2 from "../assets/videos/VIDEO-2026-07-29-17-04-08.mp4";
 import "./Home.css";
+
+const welcomeVideos = [video1, video2];
 
 const whyUs = [
   {
@@ -24,6 +35,14 @@ const whyUs = [
 ];
 
 export default function Home() {
+  const [activeVideo, setActiveVideo] = useState(0);
+  const showPrev = () =>
+    setActiveVideo(
+      (i) => (i - 1 + welcomeVideos.length) % welcomeVideos.length,
+    );
+  const showNext = () =>
+    setActiveVideo((i) => (i + 1) % welcomeVideos.length);
+
   return (
     <main>
       <Hero />
@@ -33,13 +52,29 @@ export default function Home() {
       <section id="welcome" className="welcome-section">
         <div className="container welcome-grid">
           <div className="welcome-img-wrap">
-            {/* Replace with actual image */}
-            <div className="welcome-img-placeholder">
-              <img
-                src={logoImg}
-                alt="A&B Home Renovations"
-                style={{ maxWidth: "260px" }}
+            <div className="welcome-video-wrap">
+              <video
+                key={activeVideo}
+                className="welcome-video"
+                src={welcomeVideos[activeVideo]}
+                controls
+                preload="metadata"
+                playsInline
               />
+              <button
+                className="welcome-video-nav welcome-video-prev"
+                onClick={showPrev}
+                aria-label="Previous video"
+              >
+                <ChevronLeft size={22} />
+              </button>
+              <button
+                className="welcome-video-nav welcome-video-next"
+                onClick={showNext}
+                aria-label="Next video"
+              >
+                <ChevronRight size={22} />
+              </button>
             </div>
             <div className="welcome-badge">
               <span className="badge-num">10+</span>
